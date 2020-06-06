@@ -52,7 +52,7 @@ Socket.io is a event-driven library which enables real-time and full duplex comm
 
 ## 10. Events
 
-## 11. Practical Test
+## 11. Demo Time 
 
 ### Installation
 
@@ -72,17 +72,18 @@ Socket.io is a event-driven library which enables real-time and full duplex comm
 
 - Setup .env (Pusher only)
 - Update bootstrap.js file
+- run `npm run dev`
 
 ### Integration
 
-- Create UI for Chat
-- Create one API to send a message
-- Creating event with `ShouldBroadcast` interface
-- Defining broadcast channel and Data
-- Listening For Event Broadcasts on frontend
-- Implement presence channel
+- Create a UI for Chat (`resources/views/home/index.blade.php`)
+- Create one API to send a message (`message`)
+- Creating event with `ShouldBroadcast` interface (`app/Events/NewChatMessageEvent.php`)
+- Defining broadcast channel and Data (`broadcastOn` & `broadcastWith`)
+- Listening For Event Broadcasts on frontend (`public/js/chat.js`)
+- Implement presence channel (`public/js/chat.js`)
 
-## 12. Let's do some chatting
+## 12. Let's do some chatting!
 
 ## Sample Applications
 
