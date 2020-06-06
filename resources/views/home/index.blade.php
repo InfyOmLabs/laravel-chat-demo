@@ -11,46 +11,10 @@
                             </div>
                             <div class="card-body">
                                 <ul class="list-unstyled list-unstyled-border">
-                                    <li class="media">
-                                        <img alt="image" class="mr-3 rounded-circle" width="50"
-                                             src="../assets/img/avatar/avatar-1.png">
-                                        <div class="media-body">
-                                            <div class="mt-0 mb-1 font-weight-bold">Hasan Basri</div>
-                                            <div class="text-success text-small font-600-bold"><i
-                                                        class="fas fa-circle"></i> Online
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <img alt="image" class="mr-3 rounded-circle" width="50"
-                                             src="../assets/img/avatar/avatar-2.png">
-                                        <div class="media-body">
-                                            <div class="mt-0 mb-1 font-weight-bold">Bagus Dwi Cahya</div>
-                                            <div class="text-small font-weight-600 text-muted"><i
-                                                        class="fas fa-circle"></i> Offline
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <img alt="image" class="mr-3 rounded-circle" width="50"
-                                             src="../assets/img/avatar/avatar-3.png">
-                                        <div class="media-body">
-                                            <div class="mt-0 mb-1 font-weight-bold">Wildan Ahdian</div>
-                                            <div class="text-small font-weight-600 text-success"><i
-                                                        class="fas fa-circle"></i> Online
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <img alt="image" class="mr-3 rounded-circle" width="50"
-                                             src="../assets/img/avatar/avatar-4.png">
-                                        <div class="media-body">
-                                            <div class="mt-0 mb-1 font-weight-bold">Rizal Fakhri</div>
-                                            <div class="text-small font-weight-600 text-success"><i
-                                                        class="fas fa-circle"></i> Online
-                                            </div>
-                                        </div>
-                                    </li>
+                                    @include('partials.user')
+                                    @include('partials.user')
+                                    @include('partials.user')
+                                    @include('partials.user')
                                 </ul>
                             </div>
                         </div>
@@ -58,8 +22,7 @@
                     <div class="col-12 col-sm-6 col-lg-9">
                         <div class="card mb-0 vh-100 chat-box card-success" id="mychatbox2">
                             <div class="card-header">
-                                <h4><i class="fas fa-circle text-success mr-2" title="Online"
-                                       data-toggle="tooltip"></i> Chat with Ryan</h4>
+                                <h4>LaravelLive India Jun Meetup Room</h4>
                             </div>
                             <div class="card-body chat-content">
                             </div>

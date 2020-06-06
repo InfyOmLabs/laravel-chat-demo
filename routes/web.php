@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('conversations', 'HomeController@index')->name('conversations');
+Route::get('home', 'HomeController@index')->name('home');
