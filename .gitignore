@@ -15,3 +15,5 @@ yarn-error.log
 .vscode
 **/*/.DS_Store
 _ide_helper.php
+public/js/app.js
+public/mix-manifest.json

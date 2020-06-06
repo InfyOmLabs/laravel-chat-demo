@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewChatMessageEvent;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -16,19 +17,22 @@ class MessageController extends Controller
         $message->sent_by = \Auth::id();
         $message->save();
 
+        $responseMessage = [
+            'id' => $message->id,
+            'body' => $message->body,
+            'created_at_time' => $message->created_at->format('h:i'),
+            'sentBy' => [
+                'id' => \Auth::id(),
+                'name' => \Auth::user()->name,
+                'avatarUrl' => \Auth::user()->avatar_url,
+            ]
+        ];
+
+        broadcast(new NewChatMessageEvent($responseMessage));
+
         return response()->json(
             [
-                'success' => true,
-                'data' => [
-                    'id' => $message->id,
-                    'body' => $message->body,
-                    'created_at_time' => $message->created_at->format('h:i'),
-                    'sentBy' => [
-                        'id' => \Auth::id(),
-                        'name' => \Auth::user()->name,
-                        'avatarUrl' => \Auth::user()->avatar_url,
-                    ]
-                ]
+                'success' => true
             ]
         );
     }

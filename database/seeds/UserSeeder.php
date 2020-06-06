@@ -42,6 +42,7 @@ class UserSeeder extends Seeder
 
         foreach ($users as $userInput) {
             $user = new User($userInput);
+            $user->password = \Hash::make($userInput['password']);
             $user->save();
         }
     }
