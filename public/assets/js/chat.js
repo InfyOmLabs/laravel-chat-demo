@@ -1,5 +1,5 @@
-jQuery( document ).ready(function($) {
-    if($(".chat-content").length) {
+jQuery(document).ready(function ($) {
+    if ($(".chat-content").length) {
         $(".chat-content").niceScroll({
             cursoropacitymin: .3,
             cursoropacitymax: .8,
@@ -19,9 +19,9 @@ jQuery( document ).ready(function($) {
         }, 400);
     }
 
-    $('#txtMessage').keypress(function(event){
+    $('#txtMessage').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
+        if (keycode == '13') {
             sendMessage();
         }
     });
@@ -49,18 +49,23 @@ jQuery( document ).ready(function($) {
                         message.messageClass = 'left';
                     }
 
-                    const template = $.templates("#tmplChatMessage");
-
-                    const htmlOutput = template.render(message);
-
-                    $('#chatContainer').append(htmlOutput);
-                    $('#txtMessage').val('');
-                    scrollToBottom();
+                    addMessageToContainer(message);
                 }
             })
             .fail(function () {
                 alert("error");
             });
+
+    }
+
+    function addMessageToContainer(message) {
+        const template = $.templates("#tmplChatMessage");
+
+        const htmlOutput = template.render(message);
+
+        $('#chatContainer').append(htmlOutput);
+        $('#txtMessage').val('');
+        scrollToBottom();
 
     }
 });
