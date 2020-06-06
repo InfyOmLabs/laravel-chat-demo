@@ -14,7 +14,23 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <ul>
+                        @foreach($users as $user)
+                            <li>{{  $user->name }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Messages</div>
+
+                <div class="card-body">
+                    <ul>
+                        @foreach($messages as $message)
+                            <li>{{  $message->body }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
