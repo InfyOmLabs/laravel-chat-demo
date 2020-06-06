@@ -19,8 +19,8 @@ class HomeController extends Controller
     public function index()
     {
         return view('home.index', [
-            'users' => User::all(),
-            'messages' => Message::all()
+            'users' => User::orderBy('id')->get(),
+            'messages' => Message::with('sentBy')->orderBy('created_at')->get()
         ]);
     }
 }

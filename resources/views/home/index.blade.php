@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @push('content')
     <section class="section">
         <div class="section-body">
@@ -11,10 +12,9 @@
                             </div>
                             <div class="card-body">
                                 <ul class="list-unstyled list-unstyled-border">
-                                    @include('partials.user')
-                                    @include('partials.user')
-                                    @include('partials.user')
-                                    @include('partials.user')
+                                    @foreach($users as $user)
+                                        <x-chat-user :user="$user"/>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -24,15 +24,17 @@
                             <div class="card-header">
                                 <h4>LaravelLive India Jun Meetup Room</h4>
                             </div>
-                            <div class="card-body chat-content">
+                            <div class="card-body chat-content" id="chatContainer">
+                                @foreach($messages as $message)
+                                    <x-chat-message :message="$message"/>
+                                @endforeach
                             </div>
                             <div class="card-footer chat-form">
-                                <form id="chat-form2">
-                                    <input type="text" class="form-control" placeholder="Type a message">
-                                    <button class="btn btn-primary">
-                                        <i class="far fa-paper-plane"></i>
-                                    </button>
-                                </form>
+                                <input type="text" class="form-control" placeholder="Type a message"
+                                       id="txtMessage">
+                                <button class="btn btn-primary" id="btnSendMessage">
+                                    <i class="far fa-paper-plane"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
