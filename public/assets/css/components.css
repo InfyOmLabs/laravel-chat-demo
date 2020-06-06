@@ -4,7 +4,7 @@
  * TABLE OF CONTENTS
  * 1. Components
  * 	  1.5 Chat
- 
+
  */
 /* 1.5 Chat */
 .chat-box .chat-content {
@@ -15,12 +15,12 @@
   .chat-box .chat-content .chat-item {
     display: inline-block;
     width: 100%;
-    margin-bottom: 25px; }
+    margin-bottom: 10px; }
     .chat-box .chat-content .chat-item.chat-right img {
       float: right; }
     .chat-box .chat-content .chat-item.chat-right .chat-details {
       margin-left: 0;
-      margin-right: 70px;
+      margin-right: 55px;
       text-align: right; }
       .chat-box .chat-content .chat-item.chat-right .chat-details .chat-text {
         text-align: left;
@@ -28,10 +28,10 @@
         color: #fff; }
     .chat-box .chat-content .chat-item > img {
       float: left;
-      width: 50px;
+      width: 40px;
       border-radius: 50%; }
     .chat-box .chat-content .chat-item .chat-details {
-      margin-left: 70px; }
+      margin-left: 55px; }
       .chat-box .chat-content .chat-item .chat-details .chat-text {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
         background-color: #fff;

@@ -18,7 +18,7 @@ class MessageSeeder extends Seeder
 
         $faker = Factory::create();
 
-        for ($i = 0; $i < 10; $i++)
+        for ($i = 0; $i < 5; $i++)
         {
             $user = $users->random();
 
