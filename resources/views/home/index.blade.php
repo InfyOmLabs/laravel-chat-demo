@@ -5,7 +5,7 @@
         <div class="section-body">
             <div class="container-fluid vh-100 d-flex align-items-center">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card mb-0 vh-100">
                             <div class="card-header">
                                 <h4>Who's Online?</h4>
@@ -19,7 +19,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-9">
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
                         <div class="card mb-0 vh-100 chat-box card-success" id="mychatbox2">
                             <div class="card-header">
                                 <h4>LaravelLive India Jun Meetup Room</h4>
